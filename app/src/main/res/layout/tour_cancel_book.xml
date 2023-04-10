@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+
+	<RadioGroup
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:id="@+id/tour_cancel_count_layout"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<com.google.android.material.slider.Slider
+				android:id="@+id/tour_sliderx"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="10dp"
+				android:stepSize="1.0"
+				android:valueFrom="0"
+				app:thumbColor="@color/pink"
+				app:tickColor="@color/white"
+				app:labelStyle="@style/Theme.SliderX"
+				app:trackColor="@color/pink"
+				android:valueTo="5" />
+
+		</LinearLayout>
+
+		<com.google.android.material.radiobutton.MaterialRadioButton
+			android:id="@+id/tour_cancel_count"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="10dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginEnd="10dp"
+			android:checked="true"
+			android:text="@string/CancelBookingCount"
+			android:textStyle="bold"
+			app:buttonTint="@color/pink"
+			app:useMaterialThemeColors="true" />
+
+		<com.google.android.material.radiobutton.MaterialRadioButton
+			android:id="@+id/tour_cancel_all"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="10dp"
+			android:layout_marginEnd="10dp"
+			android:text="@string/CancelBookingAll"
+			android:textStyle="bold"
+			app:buttonTint="@color/pink"
+			app:useMaterialThemeColors="true" />
+
+	</RadioGroup>
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/food_edit_submit"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginBottom="10dp"
+		android:backgroundTint="@color/blue_1fa2ff"
+		android:text="@string/submit" />
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_height="wrap_content">
+
+	<com.google.android.material.chip.ChipGroup
+		android:layout_width="wrap_content"
+		android:layout_margin="20dp"
+		android:layout_gravity="center_horizontal"
+		android:layout_height="wrap_content">
+
+		<com.google.android.material.chip.Chip
+			android:id="@+id/chip_ku"
+			style="@style/Widget.MaterialComponents.Chip.Filter"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:chipBackgroundColor="@color/chip_filter"
+			android:text="@string/Ku" />
+
+		<com.google.android.material.chip.Chip
+			android:id="@+id/chip_la"
+			style="@style/Widget.MaterialComponents.Chip.Filter"
+			app:chipBackgroundColor="@color/chip_filter"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/La" />
+
+		<com.google.android.material.chip.Chip
+			android:id="@+id/chip_tian"
+			style="@style/Widget.MaterialComponents.Chip.Filter"
+			android:layout_width="wrap_content"
+			app:chipBackgroundColor="@color/chip_filter"
+			android:layout_height="wrap_content"
+			android:text="@string/Tian" />
+
+		<com.google.android.material.chip.Chip
+			android:id="@+id/chip_xian"
+			style="@style/Widget.MaterialComponents.Chip.Filter"
+			app:chipBackgroundColor="@color/chip_filter"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/Xian" />
+
+	</com.google.android.material.chip.ChipGroup>
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/food_chip_submit"
+		android:layout_width="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:backgroundTint="@color/blue_1fa2ff"
+		android:layout_marginBottom="10dp"
+		android:text="@string/submit"
+		android:layout_height="wrap_content"/>
+
+</LinearLayout>

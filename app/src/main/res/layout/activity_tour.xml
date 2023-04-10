@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".view.TourActivity">
+
+	<com.google.android.material.appbar.MaterialToolbar
+		android:id="@+id/tour_toolBar"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:menu="@menu/menu_tour"
+		app:title="@string/Appointment" />
+
+	<ImageView
+		android:id="@+id/tour_imageview"
+		android:layout_width="match_parent"
+		android:layout_height="180dp"
+		android:contentDescription="@string/todo"
+		android:scaleType="centerCrop"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/tour_toolBar"
+		tools:src="@drawable/placeholder" />
+
+	<TextView
+		android:id="@+id/tour_title"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/tour_imageview"
+		tools:text="@string/MainName" />
+
+	<TextView
+		android:id="@+id/tour_level"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		android:textSize="14sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="@+id/tour_title"
+		app:layout_constraintStart_toStartOf="@+id/tour_title"
+		app:layout_constraintTop_toBottomOf="@+id/tour_title"
+		tools:text="@string/MainName" />
+
+	<View
+		android:id="@+id/divider_1"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_margin="10dp"
+		android:background="@drawable/shape_divider_linear"
+		app:layout_constraintStart_toStartOf="@id/tour_level"
+		app:layout_constraintTop_toBottomOf="@id/tour_level" />
+
+	<TextView
+		android:id="@+id/tour_locate"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:drawablePadding="10dp"
+		android:textSize="16sp"
+		android:textStyle="bold"
+		app:drawableStartCompat="@drawable/ic_location_14dp"
+		app:layout_constraintEnd_toEndOf="@+id/tour_level"
+		app:layout_constraintStart_toStartOf="@+id/tour_level"
+		app:layout_constraintTop_toBottomOf="@+id/divider_1"
+		tools:text="@string/MainName" />
+
+	<TextView
+		android:id="@+id/tour_openTime"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:drawablePadding="10dp"
+		android:textSize="16sp"
+		android:textStyle="bold"
+		app:drawableStartCompat="@drawable/ic_opentime_14p"
+		app:layout_constraintEnd_toEndOf="@+id/tour_locate"
+		app:layout_constraintStart_toStartOf="@+id/tour_locate"
+		app:layout_constraintTop_toBottomOf="@+id/tour_locate"
+		tools:text="@string/MainName" />
+
+	<TextView
+		android:id="@+id/tour_tickets"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:drawablePadding="10dp"
+		android:textSize="16sp"
+		android:textStyle="bold"
+		app:drawableStartCompat="@drawable/ic_tickets_14dp"
+		app:layout_constraintEnd_toEndOf="@+id/tour_locate"
+		app:layout_constraintStart_toStartOf="@+id/tour_locate"
+		app:layout_constraintTop_toBottomOf="@+id/tour_openTime"
+		tools:text="@string/MainName" />
+
+	<View
+		android:id="@+id/divider_2"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_marginStart="10dp"
+		android:layout_marginTop="20dp"
+		android:layout_marginEnd="10dp"
+		android:background="@drawable/shape_divider_linear"
+		app:layout_constraintStart_toStartOf="@id/tour_level"
+		app:layout_constraintTop_toBottomOf="@id/tour_tickets" />
+
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/tour_scroll"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_marginBottom="10dp"
+		app:layout_constraintBottom_toTopOf="@+id/tour_book"
+		app:layout_constraintEnd_toEndOf="@+id/tour_tickets"
+		app:layout_constraintStart_toStartOf="@+id/tour_tickets"
+		app:layout_constraintTop_toBottomOf="@+id/divider_2">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp">
+
+			<TextView
+				android:id="@+id/tour_desc_name"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:drawablePadding="10dp"
+				android:text="@string/TourDesc"
+				android:textSize="24sp"
+				android:textStyle="bold"
+				app:drawableStartCompat="@drawable/ic_bookmark_24dp"
+				app:layout_constraintBottom_toBottomOf="@+id/tour_sound"
+				app:layout_constraintEnd_toStartOf="@+id/tour_sound"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="@+id/tour_sound" />
+
+			<com.google.android.material.button.MaterialButton
+				android:id="@+id/tour_sound"
+				style="@style/Widget.Material3.Button.IconButton"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:icon="@drawable/ic_sound_on_24dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<TextView
+				android:id="@+id/tour_desc"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:textSize="14sp"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="@+id/tour_desc_name"
+				app:layout_constraintTop_toBottomOf="@+id/tour_sound"
+				tools:text="@string/MainName" />
+
+			<View
+				android:id="@+id/divider_3"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginStart="10dp"
+				android:layout_marginTop="20dp"
+				android:layout_marginEnd="10dp"
+				android:background="@drawable/shape_divider_linear"
+				app:layout_constraintStart_toStartOf="@id/tour_desc_name"
+				app:layout_constraintTop_toBottomOf="@id/tour_desc" />
+
+			<TextView
+				android:id="@+id/tour_traffic_name"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dp"
+				android:drawablePadding="10dp"
+				android:text="@string/tour_traffic"
+				android:textSize="24sp"
+				android:textStyle="bold"
+				app:drawableStartCompat="@drawable/ic_traffic_24dp"
+				app:layout_constraintEnd_toEndOf="@id/tour_sound"
+				app:layout_constraintStart_toStartOf="@id/tour_desc_name"
+				app:layout_constraintTop_toBottomOf="@id/divider_3" />
+
+			<TextView
+				android:id="@+id/tour_traffic_desc"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:textSize="14sp"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="@+id/tour_desc_name"
+				app:layout_constraintTop_toBottomOf="@+id/tour_traffic_name"
+				tools:text="@string/MainName" />
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/tour_rv_traffic"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="10dp"
+				app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/tour_traffic_desc"
+				tools:listitem="@layout/tour_rv_traffic" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</androidx.core.widget.NestedScrollView>
+
+	<com.google.android.material.button.MaterialButton
+		style="@style/Widget.Material3.Button.IconButton"
+		android:id="@+id/tour_start"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:icon="@drawable/ic_start_24dp"
+		android:text="@string/StartTour"
+		app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+		app:iconTint="@color/black"
+		android:textColor="@color/black"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/tour_book"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:text="@string/tour_book_tickets"
+		android:textStyle="bold"
+		app:backgroundTint="@color/blue_1fa2ff"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent" />
+
+	<LinearLayout
+		android:id="@+id/linearLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		app:layout_constraintBottom_toBottomOf="@id/tour_book"
+		app:layout_constraintEnd_toStartOf="@id/tour_book"
+		app:layout_constraintTop_toTopOf="@id/tour_book">
+
+		<com.google.android.material.button.MaterialButton
+			android:id="@+id/tour_minus"
+			style="@style/Widget.Material3.Button.IconButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:icon="@drawable/ic_minus_24dp" />
+
+		<TextView
+			android:id="@+id/tour_tickets_count"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_marginStart="10dp"
+			android:layout_marginEnd="10dp"
+			android:gravity="center_vertical"
+			android:textStyle="bold"
+			tools:text="1" />
+
+
+		<com.google.android.material.button.MaterialButton
+			android:id="@+id/tour_plus"
+			style="@style/Widget.Material3.Button.IconButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:icon="@drawable/ic_plus_24dp" />
+
+	</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

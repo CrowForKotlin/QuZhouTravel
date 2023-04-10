@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="?attr/selectableItemBackground"
+	android:orientation="vertical">
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/home_rv_card"
+		style="@style/Widget.Material3.CardView.Filled"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="10dp"
+		android:layout_marginTop="20dp"
+		android:layout_marginEnd="10dp"
+		app:cardCornerRadius="10dp"
+		app:cardElevation="20dp">
+
+		<FrameLayout
+			android:id="@+id/home_rv_card_frame"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<ImageView
+				android:id="@+id/home_rv_image"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:contentDescription="@string/todo"
+				android:foreground="@drawable/bg_home_image_elevation"
+				android:scaleType="centerCrop"
+				tools:src="@drawable/placeholder" />
+
+			<TextView
+				android:id="@+id/home_rv_title"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="bottom"
+				android:layout_margin="10dp"
+				android:layout_marginTop="10dp"
+				android:ellipsize="end"
+				android:maxLines="1"
+				android:textColor="@color/white"
+				android:textSize="14sp"
+				android:textStyle="bold"
+				tools:text="@string/MainName" />
+
+		</FrameLayout>
+
+	</androidx.cardview.widget.CardView>
+
+	<com.google.android.material.textview.MaterialTextView
+		android:id="@+id/home_rv_tickets"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="10dp"
+		android:layout_marginTop="5dp"
+		android:layout_marginEnd="10dp"
+		android:textSize="12sp"
+		android:textStyle="bold"
+		app:drawableStartCompat="@drawable/ic_tickets_14dp"
+		tools:text="@string/Tickets" />
+
+	<com.google.android.material.textview.MaterialTextView
+		android:id="@+id/home_rv_location"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="10dp"
+		android:layout_marginTop="2.5dp"
+		android:layout_marginEnd="10dp"
+		android:gravity="center_vertical"
+		android:textSize="12sp"
+		android:textStyle="bold"
+		app:drawableStartCompat="@drawable/ic_location_14dp"
+		tools:text="@string/Location" />
+
+	<com.google.android.material.textview.MaterialTextView
+		android:id="@+id/home_rv_openTime"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="10dp"
+		android:layout_marginTop="2.5dp"
+		android:layout_marginEnd="10dp"
+		android:layout_marginBottom="10dp"
+		android:drawableStart="@drawable/ic_opentime_14p"
+		android:gravity="center_vertical"
+		android:textSize="12sp"
+		android:textStyle="bold"
+		tools:text="@string/OpenTime" />
+
+</LinearLayout>

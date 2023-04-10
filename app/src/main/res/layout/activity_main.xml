@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/login"
+	tools:context=".view.LoginActivity">
+
+	<TextView
+		android:id="@+id/login_desc"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:ellipsize="end"
+		android:fontFamily="@font/yyqz"
+		android:gravity="center"
+		android:letterSpacing="1"
+		android:padding="20dp"
+		android:text="@string/MainName"
+		android:textColor="#BFFFFFFF"
+		android:textSize="28sp"
+		android:textStyle="bold"
+		app:layout_constraintBottom_toTopOf="@+id/login_usr_tf"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/login_usr_tf"
+		style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="20dp"
+		android:layout_marginEnd="20dp"
+		android:backgroundTint="@color/white"
+		android:hint="@string/Username"
+		app:boxCornerRadiusBottomEnd="20dp"
+		app:boxCornerRadiusBottomStart="20dp"
+		app:boxCornerRadiusTopEnd="20dp"
+		app:boxCornerRadiusTopStart="20dp"
+		app:boxStrokeWidth="0dp"
+		app:boxStrokeWidthFocused="0dp"
+		app:counterEnabled="true"
+		app:counterMaxLength="20"
+		app:endIconMode="clear_text"
+		app:endIconTint="#80000000"
+		app:hintTextColor="@color/white"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/vertical_0.35"
+		app:startIconDrawable="@drawable/ic_user_login_24dp"
+		app:startIconTint="@color/blue_1fa2ff">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/login_usr"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:backgroundTint="#40FFFFFF"
+			android:inputType="text"
+			android:maxLength="20"
+			android:maxLines="1"
+			android:scrollHorizontally="true"
+			android:textStyle="bold" />
+
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/login_pwd_tf"
+		style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="20dp"
+		android:layout_marginEnd="20dp"
+		android:hint="@string/Password"
+		app:boxCornerRadiusBottomEnd="20dp"
+		app:boxCornerRadiusBottomStart="20dp"
+		app:boxCornerRadiusTopEnd="20dp"
+		app:boxCornerRadiusTopStart="20dp"
+		app:boxStrokeWidth="0dp"
+		app:boxStrokeWidthFocused="0dp"
+		app:counterEnabled="true"
+		app:counterMaxLength="20"
+		app:endIconMode="password_toggle"
+		app:endIconTint="#80000000"
+		app:hintTextColor="@color/white"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/login_usr_tf"
+		app:startIconDrawable="@drawable/ic_password_24dp"
+		app:startIconTint="@color/blue_1fa2ff">
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/login_pwd"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:backgroundTint="#40FFFFFF"
+			android:inputType="textPassword"
+			android:maxLength="20"
+			android:maxLines="1"
+			android:scrollHorizontally="true"
+			android:textStyle="bold" />
+
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/toReg"
+		style="@style/Widget.Material3.Button.IconButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="5dp"
+		android:text="@string/ToReg"
+		android:textColor="#BFFFFFFF"
+		android:textStyle="bold"
+		app:layout_constraintBottom_toTopOf="@+id/login_usr_tf"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="1" />
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/login"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="40dp"
+		android:layout_marginEnd="40dp"
+		android:letterSpacing="1"
+		android:text="@string/Login"
+		android:textStyle="bold"
+		app:backgroundTint="#801FA2FF"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/vertical_0.9" />
+
+	<com.google.android.material.checkbox.MaterialCheckBox
+		android:id="@+id/check"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:buttonTint="@color/white"
+		android:text="@string/AutoLogin"
+		android:textColor="@color/white"
+		android:layout_margin="20dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/login_pwd_tf" />
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/vertical_0.5"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		app:layout_constraintGuide_percent="0.5" />
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/vertical_0.35"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		app:layout_constraintGuide_percent="0.3502052" />
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/vertical_0.9"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		app:layout_constraintGuide_percent="0.67" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+	<!-- Base application theme. -->
+	<style name="Theme.Yyqzz" parent="Theme.Material3.DayNight.NoActionBar">
+	</style>
+
+
+	<style name="Theme.SliderX" parent="Widget.Material3.Tooltip">
+		<item name="backgroundTint">@color/pink</item>
+	</style>
+
+
+	<style name="Theme.App.DatePicker" parent="ThemeOverlay.Material3.MaterialCalendar">
+		<item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>
+	</style>
+
+	<style name="ThemeOverlay.App.DatePicker" parent="@style/ThemeOverlay.Material3.MaterialCalendar">
+		<item name="colorPrimary">@color/pink</item>
+		<item name="colorOnPrimary">@color/pink</item>
+		<item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>
+	</style>
+
+	<style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+		<item name="cornerSize">16dp</item>
+	</style>
+
+</resources>
