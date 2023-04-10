@@ -1,0 +1,63 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.app.yyqz'
+    compileSdk 32
+    buildFeatures { viewBinding true } // 开启ViewBinding    布局名字+Binding
+    defaultConfig {
+        applicationId "com.app.yyqz"
+        minSdk 23
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            setProperty('archivesBaseName', '衢州文旅')
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'           // 沉浸式效果
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'                     // Okhttp网络请求
+    implementation 'com.google.code.gson:gson:2.10'                         // Gson库 序列化、反序列的Json工具
+    implementation 'io.github.zguop:pager2Banner:1.0.5'                     // Banner轮播图
+    implementation 'com.github.bumptech.glide:glide:4.14.2'                 // Glide 用于加载图片
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'         // Glide注解处理器
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'   // 刷新控件
+
+    /*  AgentWeb 是一个基于的 Android WebView ，极度容易使用以及功能强大的库，提供了 Android WebView
+       一系列的问题解决方案 ，并且轻量和极度灵活，详细使用请参照上面的 Sample 。*/
+    implementation 'com.github.Justson.AgentWeb:agentweb-core:v5.0.6-androidx' // (必选)
+    implementation 'com.github.Justson.AgentWeb:agentweb-filechooser:v5.0.6-androidx' // (可选)
+    implementation 'com.github.Justson:Downloader:v5.0.4-androidx'
+
+    // https://github.com/mplushnikov/lombok-intellij-plugin/issues/1111 解决lombok错误
+    implementation 'org.projectlombok:lombok:1.18.24'                       // 使用Lombok 可以减少实体的getter和setter
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'                  // 需要注解处理器 出问题参考这个文章 [https://www.bilibili.com/read/cv14026992/]
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+}
